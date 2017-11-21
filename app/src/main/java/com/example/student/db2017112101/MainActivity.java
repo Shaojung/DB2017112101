@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (item.getTitle().equals("DELETE"))
         {
-            for (int i=0;i<mylist.size();i++)
+            for (int i=mylist.size()-1;i>=0;i--)
             {
                 if (adapter.chkArray[i])
                 {
