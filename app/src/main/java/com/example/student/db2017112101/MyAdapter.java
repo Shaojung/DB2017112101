@@ -64,7 +64,10 @@ public class MyAdapter extends BaseAdapter {
         holder.chk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                chkArray[p] = b;
+                if (chkArray.length - 1 >= p)
+                {
+                    chkArray[p] = b;
+                }
             }
         });
         Log.d("getView", "position:" + i);

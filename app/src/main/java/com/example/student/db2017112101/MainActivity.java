@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -81,10 +82,13 @@ public class MainActivity extends AppCompatActivity {
         {
             for (int i=mylist.size()-1;i>=0;i--)
             {
+                Log.d("DEL", "i=" + i);
                 if (adapter.chkArray[i])
                 {
                     mylist.remove(i);
                 }
+                Log.d("DEL", "after i=" + i);
+                Log.d("DEL", "after size=" + mylist.size());
             }
             adapter.chkArray = new boolean[mylist.size()];
             adapter.notifyDataSetChanged();
