@@ -26,7 +26,6 @@ public class MyAdapter extends BaseAdapter {
         this.data = data;
         chkArray = new boolean[data.size()];
     }
-
     @Override
     public int getCount() {
         return data.size();

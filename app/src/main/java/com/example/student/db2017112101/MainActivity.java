@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("SHOW");
         menu.add("ADD");
+        menu.add("DELETE");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -75,6 +76,17 @@ public class MainActivity extends AppCompatActivity {
             });
 
             builder.show();
+        }
+        if (item.getTitle().equals("DELETE"))
+        {
+            for (int i=0;i<mylist.size();i++)
+            {
+                if (adapter.chkArray[i])
+                {
+                    mylist.remove(i);
+                }
+            }
+            adapter.notifyDataSetChanged();
         }
         return super.onOptionsItemSelected(item);
     }
