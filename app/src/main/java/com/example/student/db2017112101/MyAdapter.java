@@ -43,20 +43,36 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.myitem, null);
-        TextView tv = (TextView) v.findViewById(R.id.textView);
-        tv.setText(data.get(i));
+        ViewHolder holder;
+        if (view == null)
+        {
+            LayoutInflater inflater = LayoutInflater.from(context);
+            view = inflater.inflate(R.layout.myitem, null);
+            holder = new ViewHolder();
+            holder.tv = (TextView) view.findViewById(R.id.textView);
+            holder.chk = (CheckBox) view.findViewById(R.id.checkBox);
+            view.setTag(holder);
+        }
+        else
+        {
+            holder = (ViewHolder) view.getTag();
+        }
+
+        holder.tv.setText(data.get(i));
         final int p = i;
-        CheckBox chk = v.findViewById(R.id.checkBox);
-        chk.setChecked(chkArray[i]);
-        chk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.chk.setChecked(chkArray[i]);
+        holder.chk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 chkArray[p] = b;
             }
         });
         Log.d("getView", "position:" + i);
-        return v;
+        return view;
+    }
+    static class ViewHolder
+    {
+        TextView tv;
+        CheckBox chk;
     }
 }
