@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends BaseAdapter {
     ArrayList<String> data;
-    boolean chkArray[];
+    public boolean chkArray[];
     Context context;
     public MyAdapter(Context context, ArrayList<String> data)
     {

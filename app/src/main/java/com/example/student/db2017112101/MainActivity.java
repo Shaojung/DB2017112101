@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> mylist;
     ListView lv;
+    MyAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             mylist.add(s);
         }
         lv = (ListView) findViewById(R.id.listView);
-        MyAdapter adapter = new MyAdapter(this, mylist);
+        adapter = new MyAdapter(this, mylist);
         lv.setAdapter(adapter);
     }
 }
