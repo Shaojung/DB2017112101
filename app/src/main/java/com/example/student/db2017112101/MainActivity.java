@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     mylist.remove(i);
                 }
             }
+            adapter.chkArray = new boolean[mylist.size()];
             adapter.notifyDataSetChanged();
         }
         return super.onOptionsItemSelected(item);
