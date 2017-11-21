@@ -1,9 +1,12 @@
 package com.example.student.db2017112101;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("SHOW");
+        menu.add("ADD");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -49,6 +53,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             Toast.makeText(MainActivity.this, sb.toString(), Toast.LENGTH_SHORT).show();
+        }
+        if (item.getTitle().equals("ADD"))
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("新增資料");
+            final EditText ed = new EditText(MainActivity.this);
+            builder.setView(ed);
+            builder.setPositiveButton("確定新增", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    mylist.add(ed.getText().toString());
+                    adapter.chkArray = new boolean[mylist.size()];
+                }
+            });
+            builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+
+            builder.show();
         }
         return super.onOptionsItemSelected(item);
     }
