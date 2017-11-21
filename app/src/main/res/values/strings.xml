@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DB2017112101</string>
+    <string-array name="mydata">
+        <item>AAAA</item>
+        <item>BBB</item>
+        <item>CC</item>
+        <item>DDDD</item>
+        <item>EEEEEE</item>
+        <item>FF</item>
+        <item>GG</item>
+        <item>HHHH</item>
+        <item>III</item>
+        <item>JJJJJ</item>
+    </string-array>
+</resources>
