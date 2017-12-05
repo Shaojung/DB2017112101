@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,12 +19,14 @@ import java.util.ArrayList;
 
 public class MyAdapter extends BaseAdapter {
     ArrayList<String> data;
+    ArrayList<String> pics;
     public boolean chkArray[];
     Context context;
-    public MyAdapter(Context context, ArrayList<String> data)
+    public MyAdapter(Context context, ArrayList<String> data, ArrayList<String> pics)
     {
         this.context = context;
         this.data = data;
+        this.pics = pics;
         chkArray = new boolean[data.size()];
     }
     @Override
@@ -77,5 +80,6 @@ public class MyAdapter extends BaseAdapter {
     {
         TextView tv;
         CheckBox chk;
+        ImageView img;
     }
 }

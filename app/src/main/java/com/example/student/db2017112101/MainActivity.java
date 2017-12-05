@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> mylist;
+    ArrayList<String> mypics;
     ListView lv;
     MyAdapter adapter;
     @Override
@@ -23,13 +24,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mylist = new ArrayList<>();
+        mypics = new ArrayList<>();
         String data[] = getResources().getStringArray(R.array.mydata);
+        String pics[] = getResources().getStringArray(R.array.pics);
         for (String s: data)
         {
             mylist.add(s);
         }
+        for (String s : pics)
+        {
+            mypics.add(s);
+        }
+
         lv = (ListView) findViewById(R.id.listView);
-        adapter = new MyAdapter(this, mylist);
+        adapter = new MyAdapter(this, mylist, mypics);
         lv.setAdapter(adapter);
     }
 
