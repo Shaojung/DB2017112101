@@ -1,15 +1,27 @@
 <resources>
     <string name="app_name">DB2017112101</string>
     <string-array name="mydata">
-        <item>AAAA</item>
-        <item>BBB</item>
-        <item>CC</item>
-        <item>DDDD</item>
-        <item>EEEEEE</item>
-        <item>FF</item>
-        <item>GG</item>
-        <item>HHHH</item>
-        <item>III</item>
-        <item>JJJJJ</item>
+        <item>臺灣動物區</item>
+        <item>兒童動物區</item>
+        <item>亞洲熱帶雨林區</item>
+        <item>沙漠動物區</item>
+        <item>澳洲動物區</item>
+        <item>非洲動物區</item>
+        <item>溫帶動物區</item>
+        <item>鳥園區</item>
+        <item>教育中心</item>
+        <item>企鵝館</item>
+    </string-array>
+    <string-array name="pics">
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/01_FormosanAnimal.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/02_ChildrenZoo.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/03_TropicalRainforest.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/04_DesertAnimal.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/05_AustralianAnimal.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/06_AfricanAnimal.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/07_TemperateZone.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/08_BirdWorld.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/09_EducationCenter.jpg</item>
+        <item>http://www.zoo.gov.tw/iTAP/05_Exhibit/10_PenguinHouse.jpg</item>
     </string-array>
 </resources>
