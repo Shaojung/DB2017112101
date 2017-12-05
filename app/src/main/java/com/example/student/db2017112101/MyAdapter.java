@@ -11,6 +11,8 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 /**
@@ -54,6 +56,7 @@ public class MyAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.tv = (TextView) view.findViewById(R.id.textView);
             holder.chk = (CheckBox) view.findViewById(R.id.checkBox);
+            holder.img = (ImageView) view.findViewById(R.id.imageView);
             view.setTag(holder);
         }
         else
@@ -73,6 +76,7 @@ public class MyAdapter extends BaseAdapter {
                 }
             }
         });
+        Picasso.with(context).load(pics.get(i)).into(holder.img);
         Log.d("getView", "position:" + i);
         return view;
     }
